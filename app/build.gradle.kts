@@ -42,7 +42,7 @@ dependencies {
     implementation("io.noties.markwon:core:4.6.2")
     implementation("io.noties.markwon:editor:4.6.2")
     implementation("io.noties.markwon:image:4.6.2")
-
+//    implementation("io.noties.markwon:syntax-highlight:4.6.2")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

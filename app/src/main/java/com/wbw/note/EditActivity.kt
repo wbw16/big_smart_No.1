@@ -11,6 +11,7 @@ import com.wbw.note.util.FileUtil
 import io.noties.markwon.Markwon
 import io.noties.markwon.image.ImagesPlugin
 
+
 class EditActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +24,13 @@ class EditActivity : AppCompatActivity() {
         var input = ""
 
         if (mode == 1) {
+            // 修改模式
             input = FileUtil.readFile(fileName)
         } else if (mode == 0) {
+            // 新建模式
             input = ""
         } else if (mode == 2) {
+            // 解密模式
             input = FileUtil.readFile(fileName)
             key?.let {
                 input = try {
