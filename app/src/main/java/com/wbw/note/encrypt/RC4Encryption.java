@@ -47,21 +47,10 @@ public class RC4Encryption {
     }
 
     public byte[] decrypt(byte[] encryptedData) {
-        return encrypt(encryptedData); // RC4 加密和解密使用相同的操作
-    }
-
-    public static void main(String[] args) {
-        String plaintext = "Hello, RC4 Encryption!";
-        byte[] key = "SecretKey".getBytes();
         RC4Encryption rc4 = new RC4Encryption(key);
-
-        byte[] encrypted = rc4.encrypt(plaintext.getBytes());
-        System.out.println("Encrypted: " + new String(encrypted));
-
-        // Decrypting the encrypted data
-        byte[] decrypted = rc4.decrypt(encrypted);
-        System.out.println("Decrypted: " + new String(decrypted));
+        return rc4.encrypt(encryptedData);
     }
+
 
     public static byte[] encryptData(byte[] key, byte[] data) {
         RC4Encryption rc4 = new RC4Encryption(key);

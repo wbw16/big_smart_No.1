@@ -8,8 +8,6 @@
     android:orientation="horizontal"
     tools:context=".EditActivity">
 
-
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -52,9 +50,42 @@
                 android:selectAllOnFocus="true"
                 android:textSize="16sp" />
 
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/encryptions_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/encrypt_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="encryptAction"
+                    android:src="@drawable/ic_encrypted" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/decrypt_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decryptAction"
+                    android:src="@drawable/ic_decrypt" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/unlock_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decryptAction"
+                    android:src="@drawable/ic_unlock" />
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+    <!-- FloatingActionsMenu放置在最后，并设置layout_gravity为bottom|end -->
 
 </LinearLayout>

@@ -41,22 +41,7 @@ class FileAdapter(private val fileList: List<String>,private val context: Contex
              */
             startActivity(context, intent, null)
         }
-        //        holder.bind(fileName, listener);
-//        holder.mRootView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, EditActivity.class);
-//                intent.putExtra("fileName", fileName); // 将文件名添加到 Intent 中
-//                intent.putExtra("mode",1);
-//                /**
-//                 * mode 为 1 时，表示修改模式
-//                 * mode 为 0 时，表示新建模式
-//                 */
-//
-//                context.startActivity(intent);
-////                startActivity(intent);
-//            }
-//        });
+
     }
 
     override fun getItemCount(): Int {
